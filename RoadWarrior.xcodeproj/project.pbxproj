@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FD0B7030A87678187360CFB /* Pods_RoadWarrior.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02626FB35913CAAC0B173837 /* Pods_RoadWarrior.framework */; };
 		BBD735F8219151430033C4E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD735F7219151430033C4E8 /* AppDelegate.swift */; };
 		BBD735FA219151430033C4E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD735F9219151430033C4E8 /* ViewController.swift */; };
 		BBD735FD219151430033C4E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD735FB219151430033C4E8 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02626FB35913CAAC0B173837 /* Pods_RoadWarrior.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoadWarrior.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD735F4219151430033C4E8 /* RoadWarrior.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadWarrior.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD735F7219151430033C4E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBD735F9219151430033C4E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		BBD735FE219151450033C4E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBD73601219151450033C4E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBD73603219151450033C4E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6D457C33D7F057D18748C07 /* Pods-RoadWarrior.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadWarrior.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoadWarrior/Pods-RoadWarrior.debug.xcconfig"; sourceTree = "<group>"; };
+		F00AD6124C23AD91A6DAC13A /* Pods-RoadWarrior.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoadWarrior.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoadWarrior/Pods-RoadWarrior.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FD0B7030A87678187360CFB /* Pods_RoadWarrior.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98B54DD5B5B81FB65E772356 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6D457C33D7F057D18748C07 /* Pods-RoadWarrior.debug.xcconfig */,
+				F00AD6124C23AD91A6DAC13A /* Pods-RoadWarrior.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9E1D32DED12C72E598D8E065 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02626FB35913CAAC0B173837 /* Pods_RoadWarrior.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BBD735EB219151430033C4E8 = {
 			isa = PBXGroup;
 			children = (
 				BBD735F6219151430033C4E8 /* RoadWarrior */,
 				BBD735F5219151430033C4E8 /* Products */,
+				98B54DD5B5B81FB65E772356 /* Pods */,
+				9E1D32DED12C72E598D8E065 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBD73606219151450033C4E8 /* Build configuration list for PBXNativeTarget "RoadWarrior" */;
 			buildPhases = (
+				7B9A64B760A8938ED4FAA177 /* [CP] Check Pods Manifest.lock */,
 				BBD735F0219151430033C4E8 /* Sources */,
 				BBD735F1219151430033C4E8 /* Frameworks */,
 				BBD735F2219151430033C4E8 /* Resources */,
+				B9250D0E827E92759D2A2169 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B9A64B760A8938ED4FAA177 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RoadWarrior-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9250D0E827E92759D2A2169 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RoadWarrior/Pods-RoadWarrior-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftOCR/SwiftOCR.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftOCR.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RoadWarrior/Pods-RoadWarrior-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BBD735F0219151430033C4E8 /* Sources */ = {
@@ -280,6 +355,7 @@
 		};
 		BBD73607219151450033C4E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6D457C33D7F057D18748C07 /* Pods-RoadWarrior.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +374,7 @@
 		};
 		BBD73608219151450033C4E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F00AD6124C23AD91A6DAC13A /* Pods-RoadWarrior.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -8,11 +8,13 @@
 
 import UIKit
 import Vision
+import SwiftOCR
 
 class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     let imagePicker = UIImagePickerController()
-    
+    let swiftOCRInstance = SwiftOCR()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
@@ -33,7 +35,11 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
         let originalImage: UIImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         // Display image on screen.
 //        show(originalImage)
-        
+        swiftOCRInstance.recognize(originalImage) { recognizedString in
+            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+            print(recognizedString)
+            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+        }
         let cgOrientation = CGImagePropertyOrientation(rawValue: UInt32(Float(originalImage.imageOrientation.rawValue)))
         
         guard let cgImage = originalImage.cgImage else {
