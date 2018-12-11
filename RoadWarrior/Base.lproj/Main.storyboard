@@ -29,7 +29,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oV1-C5-oTV">
                                 <rect key="frame" x="191" y="251" width="74" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="UPload pic"/>
+                                <state key="normal" title="Upload pic"/>
                                 <connections>
                                     <action selector="openGallery:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kJB-Yk-hRo"/>
                                 </connections>
