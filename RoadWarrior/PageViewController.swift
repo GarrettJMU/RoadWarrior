@@ -60,7 +60,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         let nextIndex = viewControllerIndex + 1
         
         guard orderedViewControllers.count != nextIndex else {
-            return orderedViewControllers.first
+            return orderedViewControllers.first // not sure if this correct, may be causing crash
         }
         
         guard orderedViewControllers.count > nextIndex else {
