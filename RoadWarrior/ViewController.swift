@@ -9,7 +9,7 @@
 import UIKit
 import Vision
 import SwiftOCR
-//making a random change
+//making a random change again
 class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     let imagePicker = UIImagePickerController()
