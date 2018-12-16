@@ -9,7 +9,7 @@
 import UIKit
 import Vision
 import SwiftOCR
-//making a random change again
+
 class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     let imagePicker = UIImagePickerController()
@@ -30,15 +30,12 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
         self.present(imagePicker, animated: true)
     }
     
-    internal func imagePickerController(_ picker: UIImagePickerController,
+    func imagePickerController(_ picker: UIImagePickerController,
                                         didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         let originalImage: UIImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        // Display image on screen.
-//        show(originalImage)
         swiftOCRInstance.recognize(originalImage) { recognizedString in
-            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
-            print(recognizedString)
-            print("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+            print("This is the recognized String <\(recognizedString)>")
+            self.determineIfPhoneNumber(recognizedString)
         }
         let cgOrientation = CGImagePropertyOrientation(rawValue: UInt32(Float(originalImage.imageOrientation.rawValue)))
         
@@ -50,6 +47,24 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
                              orientation: cgOrientation!)
         
         dismiss(animated: true, completion: nil)
+    }
+    
+    func determineIfPhoneNumber(_ OCRValue: String) {
+        print("Checking to see if value <\(OCRValue)> is a phone number")
+        let result = self.validatePhoneNumber(OCRValue)
+        
+        if result {
+            print("we lit!!!")
+        } else {
+            print("we NOT NOT NOT lit!!!")
+        }
+    }
+    
+    fileprivate func validatePhoneNumber(_ value: String) -> Bool {
+        let PHONE_REGEX = "^\\d{3}-\\d{3}-\\d{4}$"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
+        let result =  phoneTest.evaluate(with: value)
+        return result
     }
     
     fileprivate func performVisionRequest(image: CGImage, orientation: CGImagePropertyOrientation) {
@@ -71,11 +86,8 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
     
     fileprivate func createVisionRequests() -> [VNRequest] {        
         var requests: [VNRequest] = []
-        
-        // Create & include a request if and only if switch is ON.
         requests.append(self.textDetectionRequest)
         
-        // Return grouped requests as a single array.
         return requests
     }
     
