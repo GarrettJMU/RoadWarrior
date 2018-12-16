@@ -9,7 +9,7 @@
 import UIKit
 
 class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
-
+    
     override func viewDidLoad() {
         self.dataSource = self
         
@@ -21,14 +21,14 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
                                completion: nil)
         }
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     func newVc(viewController: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController)
     }
-
+    
     lazy var orderedViewControllers: [UIViewController] = {
         return [self.newVc(viewController: "sbBlue"),
                 self.newVc(viewController: "sbRed"),
@@ -81,15 +81,15 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         
         return orderedViewControllers[nextIndex]
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

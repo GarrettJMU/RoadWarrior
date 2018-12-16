@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		704C1BAC21C5C7AE00C51A27 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704C1BAB21C5C7AE00C51A27 /* PageViewController.swift */; };
 		9FD0B7030A87678187360CFB /* Pods_RoadWarrior.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02626FB35913CAAC0B173837 /* Pods_RoadWarrior.framework */; };
 		BB3A606D21C5A5B3005285E9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A606C21C5A5B3005285E9 /* SettingsViewController.swift */; };
 		BB3A606F21C5B48A005285E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A606E21C5B48A005285E9 /* HomeViewController.swift */; };
+		BB3A607121C5DC8D005285E9 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A607021C5DC8D005285E9 /* PageViewController.swift */; };
 		BBD735F8219151430033C4E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD735F7219151430033C4E8 /* AppDelegate.swift */; };
 		BBD735FA219151430033C4E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD735F9219151430033C4E8 /* ViewController.swift */; };
 		BBD735FD219151430033C4E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD735FB219151430033C4E8 /* Main.storyboard */; };
@@ -20,9 +20,9 @@
 
 /* Begin PBXFileReference section */
 		02626FB35913CAAC0B173837 /* Pods_RoadWarrior.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoadWarrior.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		704C1BAB21C5C7AE00C51A27 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		BB3A606C21C5A5B3005285E9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BB3A606E21C5B48A005285E9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BB3A607021C5DC8D005285E9 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		BBD735F4219151430033C4E8 /* RoadWarrior.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadWarrior.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD735F7219151430033C4E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBD735F9219151430033C4E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,12 +87,12 @@
 				BBD735F7219151430033C4E8 /* AppDelegate.swift */,
 				BBD735F9219151430033C4E8 /* ViewController.swift */,
 				BBD735FB219151430033C4E8 /* Main.storyboard */,
-				704C1BAB21C5C7AE00C51A27 /* PageViewController.swift */,
 				BBD735FE219151450033C4E8 /* Assets.xcassets */,
 				BBD73600219151450033C4E8 /* LaunchScreen.storyboard */,
 				BBD73603219151450033C4E8 /* Info.plist */,
 				BB3A606C21C5A5B3005285E9 /* SettingsViewController.swift */,
 				BB3A606E21C5B48A005285E9 /* HomeViewController.swift */,
+				BB3A607021C5DC8D005285E9 /* PageViewController.swift */,
 			);
 			path = RoadWarrior;
 			sourceTree = "<group>";
@@ -220,7 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBD735FA219151430033C4E8 /* ViewController.swift in Sources */,
-				704C1BAC21C5C7AE00C51A27 /* PageViewController.swift in Sources */,
+				BB3A607121C5DC8D005285E9 /* PageViewController.swift in Sources */,
 				BBD735F8219151430033C4E8 /* AppDelegate.swift in Sources */,
 				BB3A606D21C5A5B3005285E9 /* SettingsViewController.swift in Sources */,
 				BB3A606F21C5B48A005285E9 /* HomeViewController.swift in Sources */,
