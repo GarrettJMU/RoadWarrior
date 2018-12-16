@@ -54,9 +54,13 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
         let result = self.validatePhoneNumber(OCRValue)
         
         if result {
-            print("we lit!!!")
+            let alert = UIAlertController(title: "Success!", message: "Text message is queued to go out.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true, completion: nil)
         } else {
-            print("we NOT NOT NOT lit!!!")
+            let alert = UIAlertController(title: "Failure!", message: "Text message is queued to go out.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -78,7 +82,7 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
                 try imageRequestHandler.perform(requests)
             } catch let error as NSError {
                 print("Failed to perform image request: \(error)")
-//                self.presentAlert("Image Request Failed", error: error)
+                self.laughUnexpectedErrorAlert()
                 return
             }
         }
@@ -93,18 +97,25 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
     
     lazy var textDetectionRequest: VNDetectTextRectanglesRequest = {
         let textDetectRequest = VNDetectTextRectanglesRequest(completionHandler: self.handleDetectedText)
-        // Tell Vision to report bounding box around each character.
         textDetectRequest.reportCharacterBoxes = true
+        
         return textDetectRequest
     }()
     
     fileprivate func handleDetectedText(request: VNRequest?, error: Error?) {
         if let nsError = error as NSError? {
-//            self.presentAlert("Text Detection Error", error: nsError)
+            self.laughUnexpectedErrorAlert()
             return
         }
         print(request?.results, "this is the request.results")
     }
+    
+    func laughUnexpectedErrorAlert() {
+        let alert = UIAlertController(title: "Error!", message: "There was an unexpected error.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 
 }
 
