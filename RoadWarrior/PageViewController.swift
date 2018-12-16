@@ -9,7 +9,7 @@
 import UIKit
 
 class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
-    
+    var pageControl = UIPageControl()
     override func viewDidLoad() {
         self.dataSource = self
         
@@ -21,8 +21,25 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
                                completion: nil)
         }
         super.viewDidLoad()
+        self.delegate = self
+        configurePageControl()
         
         // Do any additional setup after loading the view.
+    }
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        let pageContentViewController = pageViewController.viewControllers![0]
+        self.pageControl.currentPage = orderedViewControllers.index(of: pageContentViewController)!
+    }
+
+    func configurePageControl() {
+        // The total number of pages that are available is based on how many available colors we have.
+        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 50,width: UIScreen.main.bounds.width,height: 50))
+        self.pageControl.numberOfPages = orderedViewControllers.count
+        self.pageControl.currentPage = 0
+        self.pageControl.tintColor = UIColor.black
+        self.pageControl.pageIndicatorTintColor = UIColor.black
+        self.pageControl.currentPageIndicatorTintColor = UIColor.gray
+        self.view.addSubview(pageControl)
     }
     
     func newVc(viewController: String) -> UIViewController {
