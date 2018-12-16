@@ -82,7 +82,7 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
                 try imageRequestHandler.perform(requests)
             } catch let error as NSError {
                 print("Failed to perform image request: \(error)")
-                self.laughUnexpectedErrorAlert()
+                self.launchUnexpectedErrorAlert()
                 return
             }
         }
@@ -104,13 +104,14 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
     
     fileprivate func handleDetectedText(request: VNRequest?, error: Error?) {
         if let nsError = error as NSError? {
-            self.laughUnexpectedErrorAlert()
+            print(nsError, "this is the nsError")
+            self.launchUnexpectedErrorAlert()
             return
         }
         print(request?.results, "this is the request.results")
     }
     
-    func laughUnexpectedErrorAlert() {
+    func launchUnexpectedErrorAlert() {
         let alert = UIAlertController(title: "Error!", message: "There was an unexpected error.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(alert, animated: true, completion: nil)
