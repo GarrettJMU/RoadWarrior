@@ -21,6 +21,7 @@ To run you'll need to use a real phone as your simulator, as you can't use the c
 
 ## Third party Libraries:
 Swift OCR -> https://github.com/garnele007/SwiftOCR
+NVActivityIndicatorView -> https://github.com/ninjaprox/NVActivityIndicatorView
 
 ## Known Issues:
 The OCR isn't powerful enough to read the text so it always hits the else block and sends to slack (which is OK as we still retain the data).
