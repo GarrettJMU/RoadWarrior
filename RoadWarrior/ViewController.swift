@@ -58,13 +58,13 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
         let result = self.validatePhoneNumber(OCRValue)
         
         if result {
-            NVActivityIndicatorViewable.stopAnimating()
+//            NVActivityIndicatorViewable.stopAnimating()
             print("this is a successful hit")
 //            let alert = UIAlertController(title: "Success!", message: "Text message is queued to go out.", preferredStyle: .alert)
 //            alert.addAction(UIAlertAction(title: "OK", style: .default))
 //            self.present(alert, animated: true, completion: nil)
         } else {
-            NVActivityIndicatorViewable.stopAnimating()
+//            NVActivityIndicatorViewable.stopAnimating()
 
             let alert = UIAlertController(title: "Failure!", message: "Text message is queued to go out.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -80,7 +80,7 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
     }
     
     fileprivate func performVisionRequest(image: CGImage, orientation: CGImagePropertyOrientation) {
-        NVActivityIndicatorViewable.startAnimating()
+//        NVActivityIndicatorViewable.startAnimating()
         let requests = createVisionRequests()
         let imageRequestHandler = VNImageRequestHandler(cgImage: image,
                                                         orientation: orientation,
