@@ -13,15 +13,16 @@ Upload a pic from camera or gallery <br/>
 Customize text message to be sent <br/>
 Use Vision ML to find text on image and regex to find the phone number <br/>
 Use OCR to read said text <br/>
-Push that to an AWS Lambda that sends it to slack with the image, message, and phone if OCR was successful
+REST to slack with the image, message, and phone
 
 ## Special Instructions to run:
 App is restricted to iPhone 8 plus in portrait position <br/>
 To run you'll need to use a real phone as your simulator, as you can't use the camera on the xcode simulator 
 
 ## Third party Libraries:
-Swift OCR -> https://github.com/garnele007/SwiftOCR
-NVActivityIndicatorView -> https://github.com/ninjaprox/NVActivityIndicatorView
+Swift OCR -> https://github.com/garnele007/SwiftOCR <br/>
+NVActivityIndicatorView -> https://github.com/ninjaprox/NVActivityIndicatorView <br/>
+Alamofire -> https://github.com/Alamofire/Alamofire
 
 ## Known Issues:
-The OCR isn't powerful enough to read the text so it always hits the else block and sends to slack (which is OK as we still retain the data).
+The OCR isn't powerful enough to read the text so it always hits the else block and sends to slack (which is OK as we still retain the data). Given this issue we focused on just sending the image to slack no matter what (so we retain the image). We'll then have an intern read the text, send off the message on a short coded message (we do not have said intern, yet).
