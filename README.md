@@ -27,7 +27,7 @@ Alamofire -> https://github.com/Alamofire/Alamofire
 ## Known Issues:
 The OCR isn't powerful enough to read the text so it always hits the else block and sends to slack (which is OK as we still retain the data). Given this issue we focused on just sending the image to slack no matter what (so we retain the image). We'll then have an intern read the text, send off the message on a short coded message (we do not have said intern, yet). <br/>
 I cant put Housecall's private keys for Slack in the app (for obvious reasons) so I created a mock call here that just returns hello world <br/>
-I'm not sure if it's on my end or on the OCR end but the OCR takes ~15-20s. I put some quick examples here that you can test off of:
-FAILING EXAMPLE: <br/>
+I'm not sure if it's on my end or on the OCR end but the OCR takes ~15-20s. I put some quick examples here that you can test off of: </br>
+### FAILING EXAMPLE: <br/>
 <img src="http://bourbonstreetshots.com/wp-content/uploads/2016/12/failure.jpg"/>
 
