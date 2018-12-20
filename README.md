@@ -31,3 +31,8 @@ I'm not sure if it's on my end or on the OCR end but the OCR takes ~15-20s. I pu
 ### FAILING EXAMPLE: <br/>
 <img src="http://bourbonstreetshots.com/wp-content/uploads/2016/12/failure.jpg"/>
 
+### AN EXAMPLE THAT SHOULD WORK: <br/>
+You can see in the logs request.results has multiple things from the Vision kit yet OCR picks it up as TJLL <br/>
+
+<img src="https://www.wikihow.com/images/f/f7/Ask-Your-Crush-for-Their-Cell-Phone-Number-Step-15.jpg"/> 
+
