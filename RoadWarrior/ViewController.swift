@@ -9,12 +9,16 @@
 import UIKit
 import Vision
 import SwiftOCR
+import NVActivityIndicatorView
 
-class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate, NVActivityIndicatorViewable {
+    @IBOutlet weak var openCamButton: UIButton!
+    
     let imagePicker = UIImagePickerController()
     let swiftOCRInstance = SwiftOCR()
-
+//    let activityIndicatorView = NVActivityIndicatorView(frame: CGRect(origin: CGPoint(x: 200, y: 200)), type: CGSize(200))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
@@ -54,10 +58,14 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
         let result = self.validatePhoneNumber(OCRValue)
         
         if result {
-            let alert = UIAlertController(title: "Success!", message: "Text message is queued to go out.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default))
-            self.present(alert, animated: true, completion: nil)
+            NVActivityIndicatorViewable.stopAnimating()
+            print("this is a successful hit")
+//            let alert = UIAlertController(title: "Success!", message: "Text message is queued to go out.", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: .default))
+//            self.present(alert, animated: true, completion: nil)
         } else {
+            NVActivityIndicatorViewable.stopAnimating()
+
             let alert = UIAlertController(title: "Failure!", message: "Text message is queued to go out.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alert, animated: true, completion: nil)
@@ -72,6 +80,7 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
     }
     
     fileprivate func performVisionRequest(image: CGImage, orientation: CGImagePropertyOrientation) {
+        NVActivityIndicatorViewable.startAnimating()
         let requests = createVisionRequests()
         let imageRequestHandler = VNImageRequestHandler(cgImage: image,
                                                         orientation: orientation,

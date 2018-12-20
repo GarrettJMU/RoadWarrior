@@ -3,4 +3,5 @@ platform :ios, '11.0'
 target 'RoadWarrior' do
   use_frameworks!
   pod 'SwiftOCR'
+  pod 'NVActivityIndicatorView'
 end

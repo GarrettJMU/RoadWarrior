@@ -1,20 +1,26 @@
 PODS:
   - GPUImage (0.1.7)
+  - NVActivityIndicatorView (4.4.0):
+    - NVActivityIndicatorView/Presenter (= 4.4.0)
+  - NVActivityIndicatorView/Presenter (4.4.0)
   - SwiftOCR (1.1):
     - GPUImage
 
 DEPENDENCIES:
+  - NVActivityIndicatorView
   - SwiftOCR
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - GPUImage
+    - NVActivityIndicatorView
     - SwiftOCR
 
 SPEC CHECKSUMS:
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
   SwiftOCR: e1a5c7582f074b54df2b1ad273983088b3cf5d45
 
-PODFILE CHECKSUM: 55367a686fb6a36d6cb231cd708ada68e8918670
+PODFILE CHECKSUM: c1bc77f669408e5690bcdfb90444afe86cacabec
 
 COCOAPODS: 1.5.3
