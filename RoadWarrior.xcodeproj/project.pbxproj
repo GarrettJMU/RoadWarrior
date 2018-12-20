@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		704C1BBC21CB50F000C51A27 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 704C1BBB21CB50F000C51A27 /* Onboarding.storyboard */; };
-		704C1BC021CB510D00C51A27 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704C1BBD21CB510D00C51A27 /* WalkthroughPageViewController.swift */; };
-		704C1BC121CB510D00C51A27 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704C1BBE21CB510D00C51A27 /* WalkthroughViewController.swift */; };
-		704C1BC221CB510D00C51A27 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704C1BBF21CB510D00C51A27 /* WalkthroughContentViewController.swift */; };
 		9FD0B7030A87678187360CFB /* Pods_RoadWarrior.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02626FB35913CAAC0B173837 /* Pods_RoadWarrior.framework */; };
 		BB3A606D21C5A5B3005285E9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A606C21C5A5B3005285E9 /* SettingsViewController.swift */; };
 		BB3A606F21C5B48A005285E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A606E21C5B48A005285E9 /* HomeViewController.swift */; };
@@ -24,10 +20,6 @@
 
 /* Begin PBXFileReference section */
 		02626FB35913CAAC0B173837 /* Pods_RoadWarrior.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoadWarrior.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		704C1BBB21CB50F000C51A27 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Onboarding.storyboard; path = ../../Cafegram2EN/Cafegram2EN/Storyboard/Onboarding.storyboard; sourceTree = "<group>"; };
-		704C1BBD21CB510D00C51A27 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkthroughPageViewController.swift; path = ../../Cafegram2EN/Cafegram2EN/Controller/WalkthroughPageViewController.swift; sourceTree = "<group>"; };
-		704C1BBE21CB510D00C51A27 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkthroughViewController.swift; path = ../../Cafegram2EN/Cafegram2EN/Controller/WalkthroughViewController.swift; sourceTree = "<group>"; };
-		704C1BBF21CB510D00C51A27 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkthroughContentViewController.swift; path = ../../Cafegram2EN/Cafegram2EN/Controller/WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		BB3A606C21C5A5B3005285E9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BB3A606E21C5B48A005285E9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BB3A607021C5DC8D005285E9 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
@@ -95,15 +87,11 @@
 				BBD735F7219151430033C4E8 /* AppDelegate.swift */,
 				BBD735F9219151430033C4E8 /* CameraViewController.swift */,
 				BBD735FB219151430033C4E8 /* Main.storyboard */,
-				704C1BBB21CB50F000C51A27 /* Onboarding.storyboard */,
 				BBD735FE219151450033C4E8 /* Assets.xcassets */,
 				BBD73600219151450033C4E8 /* LaunchScreen.storyboard */,
 				BBD73603219151450033C4E8 /* Info.plist */,
 				BB3A606C21C5A5B3005285E9 /* SettingsViewController.swift */,
 				BB3A606E21C5B48A005285E9 /* HomeViewController.swift */,
-				704C1BBF21CB510D00C51A27 /* WalkthroughContentViewController.swift */,
-				704C1BBD21CB510D00C51A27 /* WalkthroughPageViewController.swift */,
-				704C1BBE21CB510D00C51A27 /* WalkthroughViewController.swift */,
 				BB3A607021C5DC8D005285E9 /* PageViewController.swift */,
 			);
 			path = RoadWarrior;
@@ -172,7 +160,6 @@
 				BBD73602219151450033C4E8 /* LaunchScreen.storyboard in Resources */,
 				BBD735FF219151450033C4E8 /* Assets.xcassets in Resources */,
 				BBD735FD219151430033C4E8 /* Main.storyboard in Resources */,
-				704C1BBC21CB50F000C51A27 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,10 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				704C1BC021CB510D00C51A27 /* WalkthroughPageViewController.swift in Sources */,
-				704C1BC121CB510D00C51A27 /* WalkthroughViewController.swift in Sources */,
 				BBD735FA219151430033C4E8 /* CameraViewController.swift in Sources */,
-				704C1BC221CB510D00C51A27 /* WalkthroughContentViewController.swift in Sources */,
 				BB3A607121C5DC8D005285E9 /* PageViewController.swift in Sources */,
 				BBD735F8219151430033C4E8 /* AppDelegate.swift in Sources */,
 				BB3A606D21C5A5B3005285E9 /* SettingsViewController.swift in Sources */,

@@ -42,17 +42,22 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
         let originalImage: UIImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         swiftOCRInstance.recognize(originalImage) { recognizedString in
             print("This is the recognized String <\(recognizedString)>")
+            if (recognizedString == "") {
+                return
+            }
             self.determineIfPhoneNumber(recognizedString)
+            self.stopAnimating()
+
         }
         let cgOrientation = CGImagePropertyOrientation(rawValue: UInt32(Float(originalImage.imageOrientation.rawValue)))
-        
+
         guard let cgImage = originalImage.cgImage else {
             return
         }
-        
+
         performVisionRequest(image: cgImage,
                              orientation: cgOrientation!)
-        
+
         dismiss(animated: true, completion: nil)
     }
     
@@ -62,17 +67,20 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
         
         if result {
             stopAnimating()
+
             print("this is a successful hit")
         } else {
-          stopAnimating()
+            stopAnimating()
 
             let alert = UIAlertController(title: "Failure!", message: "Text message is queued to go out.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alert, animated: true, completion: nil)
         }
+        stopAnimating()
+
     }
     
-    fileprivate func validatePhoneNumber(_ value: String) -> Bool {
+    func validatePhoneNumber(_ value: String) -> Bool {
         let PHONE_REGEX = "^\\d{3}-\\d{3}-\\d{4}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
         let result =  phoneTest.evaluate(with: value)
