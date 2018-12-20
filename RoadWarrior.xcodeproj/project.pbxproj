@@ -12,7 +12,7 @@
 		BB3A606F21C5B48A005285E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A606E21C5B48A005285E9 /* HomeViewController.swift */; };
 		BB3A607121C5DC8D005285E9 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3A607021C5DC8D005285E9 /* PageViewController.swift */; };
 		BBD735F8219151430033C4E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD735F7219151430033C4E8 /* AppDelegate.swift */; };
-		BBD735FA219151430033C4E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD735F9219151430033C4E8 /* ViewController.swift */; };
+		BBD735FA219151430033C4E8 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD735F9219151430033C4E8 /* CameraViewController.swift */; };
 		BBD735FD219151430033C4E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD735FB219151430033C4E8 /* Main.storyboard */; };
 		BBD735FF219151450033C4E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD735FE219151450033C4E8 /* Assets.xcassets */; };
 		BBD73602219151450033C4E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD73600219151450033C4E8 /* LaunchScreen.storyboard */; };
@@ -25,7 +25,7 @@
 		BB3A607021C5DC8D005285E9 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		BBD735F4219151430033C4E8 /* RoadWarrior.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadWarrior.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD735F7219151430033C4E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BBD735F9219151430033C4E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BBD735F9219151430033C4E8 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		BBD735FC219151430033C4E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BBD735FE219151450033C4E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBD73601219151450033C4E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				BBD735F7219151430033C4E8 /* AppDelegate.swift */,
-				BBD735F9219151430033C4E8 /* ViewController.swift */,
+				BBD735F9219151430033C4E8 /* CameraViewController.swift */,
 				BBD735FB219151430033C4E8 /* Main.storyboard */,
 				BBD735FE219151450033C4E8 /* Assets.xcassets */,
 				BBD73600219151450033C4E8 /* LaunchScreen.storyboard */,
@@ -221,7 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBD735FA219151430033C4E8 /* ViewController.swift in Sources */,
+				BBD735FA219151430033C4E8 /* CameraViewController.swift in Sources */,
 				BB3A607121C5DC8D005285E9 /* PageViewController.swift in Sources */,
 				BBD735F8219151430033C4E8 /* AppDelegate.swift in Sources */,
 				BB3A606D21C5A5B3005285E9 /* SettingsViewController.swift in Sources */,
