@@ -69,7 +69,7 @@
             </objects>
             <point key="canvasLocation" x="137" y="-600"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Road Warrior-->
         <scene sceneID="sEX-Gn-evw">
             <objects>
                 <viewController id="6IQ-Jp-bST" customClass="HomeViewController" customModule="RoadWarrior" sceneMemberID="viewController">
@@ -175,15 +175,27 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="6b19dea8-9c7a-4558-9f2e-ff4113f96c86" translatesAutoresizingMaskIntoConstraints="NO" id="c4K-TV-afZ">
-                                <rect key="frame" x="67" y="28" width="241" height="241"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome! Click on one of the four options to further your networking goals." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqB-94-fOK">
+                                <rect key="frame" x="16" y="88" width="343" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get Started" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3On-Jx-G4J">
+                                <rect key="frame" x="16" y="33" width="343" height="164"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TPI-Cd-oP0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="pb9-gA-tYz"/>
+                    <navigationItem key="navigationItem" title="Road Warrior" id="pb9-gA-tYz">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="fhz-pO-rCl"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgM-xU-076" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -446,23 +458,9 @@
             </objects>
             <point key="canvasLocation" x="4359.1999999999998" y="-601.34932533733138"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="ZBa-eN-sVX">
-            <objects>
-                <viewController id="C9o-GS-fEh" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jDk-GE-oXx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="652-Vj-bgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="1" width="564" height="199"/>
-        <image name="6b19dea8-9c7a-4558-9f2e-ff4113f96c86" width="150" height="150"/>
         <image name="camera_home_icon" width="512" height="512"/>
         <image name="cameranew-1" width="1185" height="908"/>
         <image name="gallery_2-512" width="512" height="512"/>
