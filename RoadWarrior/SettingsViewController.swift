@@ -41,10 +41,7 @@ class SettingsViewController: UIViewController {
     
     func showAlertForSave() {
         let alert = UIAlertController(title: "Success!", message: "You have updated your preferences.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-            let newView = CameraViewController()
-            self.navigationController?.pushViewController(newView, animated: true)
-            }))
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(alert, animated: true, completion: nil)
     }
     

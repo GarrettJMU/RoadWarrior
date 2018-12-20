@@ -15,22 +15,15 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
     @IBOutlet weak var openCamButton: UIButton!
     @IBOutlet weak var spinnerView: UIView!
 
-//    let bot = SlackKit()
     let imagePicker = UIImagePickerController()
     let swiftOCRInstance = SwiftOCR()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        
         let frame = CGRect(x: spinnerView.center.x, y: spinnerView.center.y, width: 50, height: 50)
         let activityIndicatorView = NVActivityIndicatorView(frame: frame)
         self.view.addSubview(activityIndicatorView)
-//        bot.addRTMBotWithAPIToken("xoxb-487960615745-509753915927-nKLDWR63pf6n3X0TUXDXheC6")
-//        bot.notificationForEvent(.message) { (event, _) in
-//            // Your bot logic here
-//            print(event.message)
-//        }
 
     }
     
