@@ -67,14 +67,15 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate, UI
         
         if result {
             stopAnimating()
-
+            //HERE IS WHERE WE WILL MAKE A POST CALL TO SLACK
             print("this is a successful hit")
         } else {
             stopAnimating()
-
+            //HERE IS WHERE WE WILL MAKE A POST CALL TO SLACK
             let alert = UIAlertController(title: "Failure!", message: "Text message is queued to go out.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alert, animated: true, completion: nil)
+            
         }
         stopAnimating()
 
