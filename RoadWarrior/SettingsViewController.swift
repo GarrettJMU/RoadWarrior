@@ -7,6 +7,15 @@
 //
 
 import UIKit
+extension UIViewController{
+    func HideKeyboard() {
+        let Tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DismissKeyboard))
+        view.addGestureRecognizer(Tap)
+    }
+    @objc func DismissKeyboard() {
+        view.endEditing(true)
+    }
+}
 
 class SettingsViewController: UIViewController {
     
@@ -16,7 +25,11 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fillInFields()
+        
+        self.HideKeyboard()
+        
     }
+
     
     func fillInFields() {
         guard let phoneNumer = UserDefaults.standard.string(forKey: "phoneNumber"), let message = UserDefaults.standard.string(forKey: "message") else {
